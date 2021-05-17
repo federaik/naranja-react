@@ -35,3 +35,18 @@ a { color: #fff }
   flex-flow: wrap;
   padding: 20px;
 }
+
+.App nav ul {
+  display: flex;
+  justify-content: center;
+}
+.App nav li {
+  list-style: none;
+  width: 150px;
+}
+
+.App footer {
+  background-color: #f9a503;
+  margin: 20px 0 0 0;
+  padding: 10px;
+}

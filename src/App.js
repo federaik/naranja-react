@@ -1,8 +1,6 @@
-import { useState } from 'react'
 import './css/App.css';
 import './css/Player.css'
 import avatar from './images/avatar-icon.png'
-import { Link } from 'react-router-dom'
 
 const players = [
   { id: 1, firstName: 'Facu', lastName: 'Otta' },
@@ -11,37 +9,22 @@ const players = [
   { id: 4, firstName: 'Rodri', lastName: 'Alegre' },
   { id: 5, firstName: 'Gula', lastName: 'Pace' },
   { id: 6, firstName: 'Fede', lastName: 'Otta' },
-  { id: 7, firstName: 'Roberto', lastName: 'Carlos' },
+  { id: 7, firstName: 'Chicho', lastName: 'Serna' },
   { id: 8, firstName: 'Juan Roman', lastName: 'Riquelme' }
 ];
 
-const Player = ({ player, showPlayerDetails, selectedPlayerId }) => {
-  return (
-    <div onClick={() => showPlayerDetails(player)}>
-      <div className={`avatar ${selectedPlayerId === player.id ? 'selected' : ''}`}>
-        <img src={avatar} alt="avatar"/>
-        <div>
-          {player.firstName} {player.lastName}
-        </div>
-      </div>
-    </div>
-  )
-}
-
 function App() {
-  const [selectedPlayerId, setSelectedPlayerId] = useState(null)
-
-  const showPlayerDetails = (player) => {
-    setSelectedPlayerId(player.id)
-  }
-
   return (
     <div className="App">
+      <header className="App-header">
+        <h1 className="App-logo">Reactive Orange</h1>
+      </header>
       <nav>
         <ul>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
+          <li>Games</li>
+          <li>Table</li>
+          <li>Scores</li>
+          <li>About</li>
         </ul>
       </nav>
       <main>
@@ -49,15 +32,21 @@ function App() {
           { 
             players.map(player => {
               return (
-                <Player player={player} 
-                  key={player.id} 
-                  showPlayerDetails={showPlayerDetails} 
-                  selectedPlayerId={selectedPlayerId} 
-                />
+                <div key={player.id}>
+                  <div className="avatar">
+                    <img src={avatar} alt="avatar"/>
+                    <div>
+                      {player.firstName} {player.lastName}
+                    </div>
+                  </div>
+                </div>
             )}) 
           }
         </div>
       </main>
+      <footer>
+        <h3>this is the footer</h3>
+      </footer>
     </div>
   );
 }

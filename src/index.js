@@ -3,16 +3,13 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './index.css';
 import App from './App';
-import About from './components/About'
-import Header from './components/Header'
+
 // import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <Router>
-    <Header />
     <Switch>
       <Route exact path='/' component={App} />
-      <Route exact path='/about' component={About} />
     </Switch>
   </Router>,
   document.getElementById('root')
