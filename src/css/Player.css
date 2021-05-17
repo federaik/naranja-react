@@ -1,0 +1,11 @@
+.avatar {
+  cursor: pointer;
+}
+
+.avatar.selected {
+  background-color: orange;
+}
+
+.avatar img {
+  max-width: 150px;
+}

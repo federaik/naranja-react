@@ -1,0 +1,37 @@
+html, body {
+  background-color: #282c34;
+  color: #fff;
+}
+
+a { color: #fff }
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  pointer-events: none;
+  color: #ffa500;
+  margin: 0;
+  padding: 20px;
+}
+
+.App-header {
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App main {
+  display: flex;
+  justify-content: center;
+}
+
+.App .players-container {
+  border: 1px solid #505458;
+  display: flex;
+  justify-content: center;
+  max-width: 800px;
+  flex-flow: wrap;
+  padding: 20px;
+}
